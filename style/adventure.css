@@ -9,7 +9,7 @@ body{
     min-height: 100vh;
 
     background:
-    url('/imagens/papel.jpg');
+    url('./imagens/papel.jpg');
 
     background-size: cover;
     background-position: center;
