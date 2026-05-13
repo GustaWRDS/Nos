@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nosso Livro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/adventure.css">
+</head>
+<body>
+
+<!-- TELA SENHA -->
+
+<div class="lock-screen" id="lockScreen">
+
+  <div class="lock-box">
+
+    <h1>🔐</h1>
+
+    <p>
+      Algumas aventuras precisam de uma chave especial...
+    </p>
+
+    <input type="password" id="password" placeholder="Digite a senha">
+
+    <button onclick="checkPassword()">
+      Entrar
+    </button>
+
+  </div>
+
+</div>
+
+<!-- LIVRO FECHADO -->
+
+<div class="book-scene" id="bookScene" style="display: none;">
+
+    <div class="book-closed" id="closedBook">
+
+        <div class="book-cover">
+
+            <img src="imagens/capa.png" alt="Capa do Livro">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- LIVRO ABERTO -->
+
+<div class="book-open" id="openBook" style="display: none;">
+
+    <div class="book-page active">
+        <img src="imagens/pagina1.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina2.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina3.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina4.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina5.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina6.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina7.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina8.0.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina8.png">
+    </div>
+
+    <div class="book-page">
+        <img src="imagens/pagina9.png">
+    </div>
+
+    <!-- BOTÕES -->
+
+    <div class="controls">
+
+        <button onclick="prevPage()">
+            ← Anterior
+        </button>
+
+        <button onclick="nextPage()">
+            Próxima →
+        </button>
+
+    </div>
+
+    
+</div>
+
+<script src="script/adventure.js"></script>
+
+</body>
+</html>
