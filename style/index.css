@@ -63,7 +63,7 @@ body {
     min-height: 100vh;
 
     background:
-    linear-gradient(to bottom, rgba(15,23,42,0.4),rgba(15,23,42,0.85)  ), url('imagens/principal.jpg');
+    linear-gradient(to bottom, rgba(15,23,42,0.4),rgba(15,23,42,0.85)  ), url('./imagens/principal.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -109,7 +109,7 @@ section {
   background: url('/imagens/secundaria') center no-repeat;
   background-size: cover;
   min-height: 100vh;
-  background: linear-gradient(rgba(15,23,42,0.65),rgba(15,23,42,0.85)), url('/imagens/secundaria') center no-repeat;
+  background: linear-gradient(rgba(15,23,42,0.65),rgba(15,23,42,0.85)), url('./imagens/secundaria') center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -172,7 +172,7 @@ section {
 
 #fotos{
     min-height: 100vh;
-    background:linear-gradient(rgba(15,23,42,0.7),rgba(15,23,42,0.9)), url('/imagens/terceira') center no-repeat;
+    background:linear-gradient(rgba(15,23,42,0.7),rgba(15,23,42,0.9)), url('./imagens/terceira') center no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -313,7 +313,7 @@ section {
 /* Música */
 #musicas{
     min-height: 100vh;
-    background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.95)), url('/imagens/musica-bg.jpg') center no-repeat;
+    background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.95)), url('./imagens/musica-bg.jpg') center no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
