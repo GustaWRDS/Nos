@@ -366,4 +366,21 @@ footer p{
   }
 }
 
+/* Para dispositivos sem hover (ex: smartphones) */
+@media (hover: none){
+
+    .card::before{
+
+        background:
+        rgba(0,0,0,0.45);
+    }
+
+    .mensagem{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
 
