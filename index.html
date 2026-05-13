@@ -7,16 +7,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
   <!-- Navbar -->
-  <header class="navbar">
-    <nav class="navbar">
-      <a href="#inicio">Início</a>
-      <a href="#contador">∞</a>
-      <a href="#fotos">Memórias</a>
-      <a href="#musicas">Músicas</a>
-    </nav>
-    <a href=""><img src="imagens/icon-cad.png" id="cad"></a>
-  </header>
+<header class="header">
+
+  <nav class="navbar">
+    <a href="#inicio">Início</a>
+    <a href="#contador">∞</a>
+    <a href="#fotos">Memórias</a>
+    <a href="#musicas">Músicas</a>
+  </nav>
+
+  <a href="" class="cadeado">
+    <img src="imagens/icon-cad.png" id="cad">
+  </a>
+
+</header>
+
+
 
   <!-- Hero -->
   <section id="inicio" class="hero">
@@ -27,13 +36,50 @@
     </div> 
   </section>
 
+
+
+
   <!-- Contador -->
   <section id="contador" class="contador">
     <div class="overlay">
       <h2>Estamos juntos há:</h2>
-      <div class="tempo" id="timeTogether"></div>
+      <div class="tempo">
+
+        <div class="box">
+            <span id="anos">0</span>
+            <p>Anos</p>
+        </div>
+
+        <div class="box">
+            <span id="meses">0</span>
+            <p>Meses</p>
+        </div>
+
+        <div class="box">
+            <span id="dias">0</span>
+            <p>Dias</p>
+        </div>
+
+        <div class="box">
+            <span id="horas">0</span>
+            <p>Horas</p>
+        </div>
+
+        <div class="box">
+            <span id="minutos">0</span>
+            <p>Minutos</p>
+        </div>
+
+        <div class="box">
+            <span id="segundos">0</span>
+            <p>Segundos</p>
+        </div>
     </div>
+  </div>
   </section>
+
+
+
 
   <!-- Fotos -->
   <section id="fotos">
@@ -41,7 +87,14 @@
       <h2>Nossas Memórias ⌛</h2>
         <div class="container">
             <div class="carrossel">
-                <article class="card" style="background-image: url('imagens/foto1.jpg');"></article>
+                <article class="card" style="background-image: url('imagens/foto1.jpg');">
+                  <div class="mensagem">
+                    Mesmo depois de muitos anos, nunca esqueço como me senti quando fizemos o nosso primeiro vídeo/foto.
+                    <p>Nós ainda éramos só amigos, mas você não tem noção de quantas vezes eu vi e revi esse vídeo. O quanto fiquei feliz ao notar que você estava
+                      com um sorrisão imenso no rosto. </p>
+                    <p>E desde então, esse sorriso se tornou o melhor colírio que meus olhos poderiam desejar. </p>
+                  </div>
+                </article>
                 <article class="card" style="background-image: url('imagens/foto2.jpg');"></article>
                 <article class="card" style="background-image: url('imagens/foto3.jpg');"></article>
                 <article class="card" style="background-image: url('imagens/foto4.jpg');"></article>
@@ -66,13 +119,19 @@
     </div>
 </section>
 
+
+
+
+
   <!-- Músicas -->
   <section id="musicas">
-    <iframe data-testid="embed-iframe" style="border-radius:12px" 
-    src="https://open.spotify.com/embed/playlist/7m4rNSKIlpAqbZMFJBWUce?utm_source=generator" 
-    width="100%" height="352" frameBorder="0" allowfullscreen="" 
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7m4rNSKIlpAqbZMFJBWUce?utm_source=generator&theme=0" 
+    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </section>
+
+
+
+
 
   <!-- Rodapé -->
   <footer>
