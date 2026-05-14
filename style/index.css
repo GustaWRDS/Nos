@@ -63,7 +63,7 @@ body {
     min-height: 100vh;
 
     background:
-    linear-gradient(to bottom, rgba(15,23,42,0.4),rgba(15,23,42,0.85)  ), url('../imagens/principal.jpg');
+    linear-gradient(to bottom, rgba(15,23,42,0.4),rgba(15,23,42,0.85)  ), url('/imagens/principal.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -80,6 +80,11 @@ body {
     border-radius: 30px;
     width: min(90%, 700px);
     box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+.overlay{
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1{
@@ -104,44 +109,268 @@ section {
     font-size: 2rem;
 }
 
+.contador-layout{
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 1400px;
+    margin: auto;
+}
 
+/* Casal */
+
+.couple-card{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+    overflow: hidden;
+    width: 420px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    transition: 0.3s;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.couple-card:hover{
+    transform: translateY(-5px);
+}
+
+.couple-card img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    object-position: center;
+    background: #0f172a;
+}
+
+.couple-info{
+    padding: 18px 25px 22px;
+    text-align: left;
+}
+
+.couple-info h3{
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    opacity: 0.8;
+}
+
+.couple-info p{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+    line-height: 1.1;
+}
+
+.couple-info span{
+
+    color:rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    display: block;
+    margin-top: 0;
+}
+
+
+.couple-card:hover img{
+    transform: scale(1.03);
+}
+
+.couple-card::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    background: linear-gradient(to top,rgba(0,0,0,0.5), transparent);
+    pointer-events: none;
+}
+
+/* Contador */
 .contador {
-  background: url('/imagens/secundaria') center no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  background: linear-gradient(rgba(15,23,42,0.65),rgba(15,23,42,0.85)), url('../imagens/secundaria') center no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(135deg,#111827,#1f2937,#0f172a);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contador h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.tempo{
+    flex: 1;
+}
+
+/* Partículas flutuantes */
+.particles{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particles span{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    animation: floatParticle linear infinite;
+    bottom: -20px;
+}
+
+.particles::before, .particles::after{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    box-shadow:
+    100px 200px rgba(255,255,255,0.5),
+    300px 100px rgba(255,255,255,0.6),
+    500px 400px rgba(255,255,255,0.4),
+    700px 250px rgba(255,255,255,0.7),
+    900px 150px rgba(255,255,255,0.5),
+1200px 350px rgba(255,255,255,0.6);
+    animation: floatParticles 12s linear infinite;
+}
+
+.particles::after{
+    animation-duration: 18s;
+    opacity: 0.5;
+}
+
+.particles span:nth-child(1){
+    left: 5%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.particles span:nth-child(2){
+    left: 15%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.particles span:nth-child(3){
+    left: 25%;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+.particles span:nth-child(4){
+    left: 35%;
+    animation-duration: 14s;
+    animation-delay: 3s;
+}
+
+.particles span:nth-child(5){
+    left: 50%;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+
+.particles span:nth-child(6){
+    left: 65%;
+    animation-duration: 13s;
+    animation-delay: 1s;
+}
+
+.particles span:nth-child(7){
+
+    left: 75%;
+    animation-duration: 11s;
+    animation-delay: 4s;
+}
+
+.particles span:nth-child(8){
+    left: 85%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+
+.particles span:nth-child(9){
+    left: 92%;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+.particles span:nth-child(10){
+    left: 98%;
+    animation-duration: 12s;
+    animation-delay: 5s;
+}
+
+@keyframes floatParticle{
+
+    from{
+        transform:
+        translateY(0)
+        scale(1);
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    to{
+        transform:
+        translateY(-110vh)
+        scale(0.5);
+        opacity: 0;
+    }
 }
 
 /* container dos quadrados */
 
 .tempo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 1000px;
+    flex: 1;
+    height: 100%;
 }
 
-/* quadrados */
-
-.box{
-    width: 320px;
-    height: 120px;
-    background: rgba(255,255,255,0.75);
+.time-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     transition: 0.3s;
-    backdrop-filter: blur(15px);
+}
 
+.time-card:hover{
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.12);
+}
+
+.time-card span{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+}
+
+.time-card p{
+    margin-top: 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 /* hover */
@@ -172,7 +401,7 @@ section {
 
 #fotos{
     min-height: 100vh;
-    background:linear-gradient(rgba(15,23,42,0.7),rgba(15,23,42,0.9)), url('../imagens/terceira') center no-repeat;
+    background:linear-gradient(rgba(15,23,42,0.7),rgba(15,23,42,0.9)), url('/imagens/terceira') center no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -313,7 +542,7 @@ section {
 /* Música */
 #musicas{
     min-height: 100vh;
-    background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.95)), url('../imagens/musica-bg.jpg') center no-repeat;
+    background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.95)), url('/imagens/musica-bg.jpg') center no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -376,5 +605,45 @@ footer p{
     .mensagem{
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Para telas menores, ajustar o layout do contador */
+@media (max-width: 700px){
+
+    .tempo{
+        grid-template-columns:
+        repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1100px){
+
+    .contador-layout{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .couple-card{
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .tempo{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1101px){
+
+    .tempo{
+        height: 100%;
+    }
+
+    .time-card{
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
