@@ -20,3 +20,62 @@ function calcTimeTogether() {
 
 calcTimeTogether();
 setInterval(calcTimeTogether, 1000);
+
+
+const carrossel =
+document.querySelector(".carrossel");
+
+let autoScroll;
+
+function startCarousel(){
+
+    if(window.innerWidth > 580){
+
+        autoScroll = setInterval(() => {
+
+            carrossel.scrollBy({
+                left: 740,
+                behavior: "smooth"
+            });
+
+            // reinicia quando chegar no fim
+
+            if(
+                carrossel.scrollLeft +
+                carrossel.clientWidth >=
+                carrossel.scrollWidth - 10
+            ){
+
+                carrossel.scrollTo({
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }
+
+        }, 5500);
+    }
+}
+
+startCarousel();
+
+const cards =
+document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        // remove dos outros
+
+        cards.forEach(c => {
+
+            if(c !== card){
+                c.classList.remove("active");
+            }
+        });
+
+        // alterna no clicado
+
+        card.classList.toggle("active");
+    });
+});
