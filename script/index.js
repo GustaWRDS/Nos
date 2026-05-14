@@ -10,12 +10,12 @@ function calcTimeTogether() {
   let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds =Math.floor((diff % (1000 * 60)) / 1000);
-  document.getElementById("anos").innerText = years;
-  document.getElementById("meses").innerText = months;
-  document.getElementById("dias").innerText = remainingDays;
-  document.getElementById("horas").innerText = hours;
-  document.getElementById("minutos").innerText = minutes;
-  document.getElementById("segundos").innerText = seconds;
+  document.getElementById("years").innerText = years;
+  document.getElementById("months").innerText = months;
+  document.getElementById("days").innerText = remainingDays;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
 }
 
 calcTimeTogether();
