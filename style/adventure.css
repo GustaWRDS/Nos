@@ -7,7 +7,7 @@
 body{
 
     min-height: 100vh;
-    background: url('/imagens/madeira.jpg');
+    background: url('../imagens/madeira.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
