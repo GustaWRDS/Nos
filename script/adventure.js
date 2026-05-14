@@ -1,9 +1,40 @@
+const pageSound =
+new Audio("audio/page-flip.mp3");
+
+function nextPage(){    
+
+    if(currentPage < pages.length - 1){
+
+        pageSound.currentTime = 0;
+
+        pageSound.play();
+
+        currentPage++;
+
+        showPage(currentPage);
+    }
+}
+
+function prevPage(){
+
+    if(currentPage > 0){
+
+        pageSound.currentTime = 0;
+
+        pageSound.play();
+
+        currentPage--;
+
+        showPage(currentPage);
+    }
+}
+
 function checkPassword(){
 
     const password =
     document.getElementById("password").value;
 
-    if(password === "1710"){
+    if(password === "2917"){
 
         // esconde senha
 
@@ -18,9 +49,15 @@ function checkPassword(){
         .style.display = "flex";
 
     }else{
-
-        alert("Senha incorreta 😭");
+        document.getElementById("errorPopup").style.display = "flex";
     }
+}
+
+function closePopup(){
+
+    document
+    .getElementById("errorPopup")
+    .style.display = "none";
 }
 
 /* CAPA */
@@ -57,22 +94,3 @@ function showPage(index){
     pages[index].classList.add("active");
 }
 
-function nextPage(){
-
-    if(currentPage < pages.length - 1){
-
-        currentPage++;
-
-        showPage(currentPage);
-    }
-}
-
-function prevPage(){
-
-    if(currentPage > 0){
-
-        currentPage--;
-
-        showPage(currentPage);
-    }
-}
