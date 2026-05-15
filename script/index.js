@@ -79,3 +79,23 @@ cards.forEach(card => {
         card.classList.toggle("active");
     });
 });
+
+const musicSection =
+document.getElementById("musicas");
+
+const observer =
+new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            musicSection.classList.add("show");
+        }
+    });
+
+}, {
+    threshold: 0.35
+});
+
+observer.observe(musicSection);
