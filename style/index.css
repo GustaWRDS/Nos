@@ -721,6 +721,35 @@ footer p{
         grid-template-columns:
         repeat(2, 1fr);
     }
+
+    .mensagem{
+        font-size: 1rem;
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 362px){
+
+    .mensagem{
+        font-size: 1rem;
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 332px){
+
+    .mensagem{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 422px){
+
+    .cadeado{
+        position: static;
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 1100px){
@@ -753,3 +782,4 @@ footer p{
         justify-content: center;
     }
 }
+
