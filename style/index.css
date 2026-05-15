@@ -83,9 +83,7 @@ section::before{
 /* Hero */
 .hero{
     min-height: 100vh;
-
-    background:
-    linear-gradient(to bottom, rgba(15,23,42,0.4),rgba(15,23,42,0.85)  ), url('../imagens/principal.jpg');
+    background: linear-gradient(to bottom, rgba(15,23,42,0.15), rgba(15,23,42,0.55)), url('../imagens/principal.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -95,13 +93,39 @@ section::before{
 }
 
 .hero .overlay{
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 50px 35px;
-    border-radius: 30px;
-    width: min(90%, 700px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    background:rgba(15,23,42,0.45);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 60px 45px;
+    border-radius: 35px;
+    width: min(90%, 750px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    overflow: hidden;
+}
+
+.hero .overlay::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200px;
+    height: 200%;
+    background: linear-gradient(to right, transparent,rgba(255,255,255,0.08),transparent);
+    transform: rotate(25deg);
+    animation: shine 8s linear infinite;
+}
+
+@keyframes shine{
+
+    from{
+        left: -60%;
+    }
+
+    to{
+        left: 140%;
+    }
 }
 
 .overlay{
@@ -127,8 +151,41 @@ section {
     margin-bottom: 20px;
 }
 
+.hero-text{
+    margin-top: 18px;
+    font-size: 1.15rem;
+    color:rgba(255,255,255,0.78);
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+}
+
 .hero span{
     font-size: 2rem;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background:rgba(56,189,248,0.12);
+    border-radius: 50%;
+    filter: blur(140px);
+    animation: heroGlow 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes heroGlow{
+
+    0%,100%{
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50%{
+        transform: scale(1.08);
+        opacity: 1;
+    }
 }
 
 .contador-layout{
@@ -622,7 +679,7 @@ section {
 #musicas{
     min-height: 100vh;
     position: relative;
-    background:linear-gradient(rgba(15,23,42,0.82),rgba(15,23,42,0.96)),url('../imagens/musica-bg.png');
+    background:linear-gradient(rgba(15,23,42,0.55),rgba(15,23,42,0.78)),url('../imagens/musica-bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -638,8 +695,8 @@ section {
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background:rgba(56,189,248,0.12);
-    filter: blur(140px);
+    background:rgba(56,189,248,0.06);
+    filter: blur(180px);
     z-index: 1;
     animation: pulseGlow 6s ease-in-out infinite;
 }
@@ -651,12 +708,24 @@ section {
     height: 600px;
     border: none;
     border-radius: 30px;
+    background:rgba(15,23,42,0.18);
+    opacity: 0.60;
+    backdrop-filter: blur(6px);
     box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-    transition: 0.4s;
+    transition:
+    0.4s ease,
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+#musicas.show iframe{
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 #musicas iframe:hover{
     transform: translateY(-5px);
+    opacity: 0.85;
     box-shadow: 0 30px 80px rgba(0,0,0,0.55);
 }
 
@@ -725,6 +794,27 @@ footer p{
     .mensagem{
         font-size: 1rem;
         padding: 30px 15px;
+    }
+
+    #musicas iframe{
+        height: 480px;
+        opacity: 0.72;
+    }
+
+    .hero{
+        align-items: flex-start;
+        padding: 20px;
+        min-height: 100vh;
+        background-position: center 15%;
+    }
+
+    .hero .overlay{
+        padding: 35px 25px;
+        margin-top: 90px;
+        width: 90%;
+        border-radius: 28px;
+        backdrop-filter: blur(10px);
+        background:rgba(15,23,42,0.45);
     }
 }
 
