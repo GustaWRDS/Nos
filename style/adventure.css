@@ -224,6 +224,221 @@ button:hover{
     background: #5a2d0c;
 }
 
+/* Página dos ingressos */
+
+.tickets-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* Lado esquerdo */
+
+.ticket-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.ticket-title{
+    font-size: 2.5rem;
+    color: #5c3b1e;
+    margin-bottom: 25px;
+    font-family: "Georgia", serif;
+}
+
+.ticket-text{
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #4a3422;
+    max-width: 420px;
+}
+
+.ticket-footer{
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #7a4b2c;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* Lado direito */
+
+.ticket-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Área dos ingressos */
+
+.tickets-area{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ingressos */
+
+.ticket{
+    width: 320px;
+    position: absolute;
+    border-radius: 18px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover */
+
+.ticket:hover{
+    transform: scale(1.04) rotate(0deg);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* Ingresso esquerdo */
+
+.ticket-1{
+    left: 30px;
+    transform: rotate(-7deg);
+    z-index: 1;
+}
+
+/* Ingresso direito */
+
+.ticket-2{
+    right: 30px;
+    transform: rotate(6deg);
+    z-index: 2;
+}
+
+/* Fita adesiva */
+
+.ticket::before{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    background:rgba(255,255,255,0.4);
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
+}
+
+/* Anotação */
+
+.ticket-note{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    font-family: cursive;
+    font-size: 1.3rem;
+    color: #7a4b2c;
+    transform: rotate(-4deg);
+    opacity: 0.9;
+}
+
+/* Fundo da página dos ingressos */
+
+.tickets-page{
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 40px;
+    background: url("../imagens/paper-texture.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow:inset 0 0 80px rgba(0,0,0,0.08);
+}
+
+
+.ticket-left, .ticket-right{
+    position: relative;
+    z-index: 2;
+}
+
+/* Estrelinhas decorativas */
+
+.ticket-left::before{
+    content: "✦";
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 1.5rem;
+    color: rgba(122,75,44,0.35);
+    transform: rotate(-12deg);
+}
+
+.ticket-left::after{
+    content: "★";
+    position: absolute;
+    bottom: 60px;
+    left: 120px;
+    font-size: 1rem;
+    color: rgba(122,75,44,0.25);
+    transform: rotate(10deg);
+}
+
+/* Responsividade */
+
+@media (max-width: 900px){
+
+    .tickets-page{
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .ticket-left{
+        text-align: center;
+        align-items: center;
+    }
+
+    .ticket-title{
+        font-size: 2rem;
+    }
+
+    .ticket-text{
+        font-size: 1rem;
+    }
+
+    .tickets-area{
+        height: 420px;
+    }
+
+    .ticket{
+        width: 230px;
+    }
+
+    .ticket-1{
+        left: 0;
+    }
+
+    .ticket-2{
+        right: 0;
+    }
+
+    .ticket-note{
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%) rotate(-3deg);
+        font-size: 1rem;
+    }
+}
+
 
 /* POPUP DE ERRO */
 .error-popup{
