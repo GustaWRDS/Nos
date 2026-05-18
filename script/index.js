@@ -52,7 +52,7 @@ function startCarousel(){
                 });
             }
 
-        }, 5500);
+        }, 10000);
     }
 }
 
