@@ -1,3 +1,18 @@
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+    overflow-x: clip;
+
+}
+
+section, .hero, .overlay, .overlay-fotos, .contador-layout, .carrossel, .card, .tickets-page{
+    max-width: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Georgia", serif;
@@ -7,7 +22,6 @@ body {
 }
 
 .header{
-
     position: fixed;
     top: 0;
     left: 0;
@@ -82,7 +96,7 @@ section::before{
 
 /* Hero */
 .hero{
-    min-height: 100vh;
+    min-height: 100%;
     background: linear-gradient(to bottom, rgba(15,23,42,0.15), rgba(15,23,42,0.55)), url('../imagens/principal.jpg');
     background-size: cover;
     background-position: center;
@@ -98,9 +112,9 @@ section::before{
     backdrop-filter: blur(10px);
     background:rgba(15,23,42,0.45);
     border: 1px solid rgba(255,255,255,0.12);
-    padding: 60px 45px;
     border-radius: 35px;
     width: min(90%, 750px);
+    padding: clamp(25px, 5vw, 50px);
     box-shadow: 0 20px 60px rgba(0,0,0,0.45);
     overflow: hidden;
 }
@@ -800,6 +814,11 @@ footer p{
         repeat(2, 1fr);
     }
 
+    #musicas::before{
+        width: 320px;
+        height: 320px;
+    }
+
     .mensagem{
         font-size: 1rem;
         padding: 30px 15px;
@@ -812,7 +831,7 @@ footer p{
 
     .hero{
         align-items: flex-start;
-        padding: 20px;
+        padding: 15px;
         min-height: 100vh;
         background-position: center 15%;
     }
@@ -820,7 +839,7 @@ footer p{
     .hero .overlay{
         padding: 35px 25px;
         margin-top: 90px;
-        width: 90%;
+        width: 100%;
         border-radius: 28px;
         backdrop-filter: blur(10px);
         background:rgba(15,23,42,0.45);
