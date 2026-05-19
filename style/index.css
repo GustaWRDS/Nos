@@ -820,6 +820,7 @@ footer p{
     }
 
     .mensagem{
+        max-width: 80%;
         font-size: 1rem;
         padding: 30px 15px;
     }
@@ -843,6 +844,25 @@ footer p{
         border-radius: 28px;
         backdrop-filter: blur(10px);
         background:rgba(15,23,42,0.45);
+    }
+
+    .overlay-fotos{
+        width: 100%;
+        padding: 15px 8px;
+        border-radius: 0;
+    }
+
+    .carrossel{
+        gap: 18px;
+        padding-inline: 6px;
+    }
+
+    .card{
+        width: 96vw;
+        max-width: none;
+        margin: 0 auto;
+        border-radius: 22px;
+        aspect-ratio: 9 / 13;
     }
 }
 
