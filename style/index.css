@@ -864,6 +864,10 @@ footer p{
         border-radius: 22px;
         aspect-ratio: 9 / 13;
     }
+
+    .foto-1{
+        background-position: center 95%;
+    }
 }
 
 @media (max-width: 362px){
