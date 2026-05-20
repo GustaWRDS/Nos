@@ -96,14 +96,29 @@ section::before{
 
 /* Hero */
 .hero{
-    min-height: 100%;
-    background: linear-gradient(to bottom, rgba(15,23,42,0.15), rgba(15,23,42,0.55)), url('../imagens/principal.jpg');
-    background-size: cover;
-    background-position: center;
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+
+    padding: 90px 20px 40px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(15,23,42,0.45),
+        rgba(15,23,42,0.62),
+        rgba(15,23,42,0.88)
+    ),
+    url('../imagens/principal.jpg');
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .hero .overlay{
@@ -117,6 +132,22 @@ section::before{
     padding: clamp(25px, 5vw, 50px);
     box-shadow: 0 20px 60px rgba(0,0,0,0.45);
     overflow: hidden;
+}
+
+.hero::after{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.03),
+        transparent 60%
+    );
+
+    pointer-events: none;
 }
 
 .hero .overlay::before{
@@ -573,7 +604,7 @@ section {
     margin-bottom: 25px;
 }
 
-.overlay-fotos, .box, .hero .overlay{
+.overlay-fotos, .box{
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(15px);
     border:1px solid rgba(255,255,255,0.1);
