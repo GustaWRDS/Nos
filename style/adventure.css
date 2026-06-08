@@ -230,6 +230,7 @@ button:hover{
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .future-memory img{
@@ -240,12 +241,10 @@ button:hover{
 .future-overlay{
     position: absolute;
     inset: 0;
-
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
-    padding: 40px;
+    padding: 20px;
 }
 
 .future-overlay{
